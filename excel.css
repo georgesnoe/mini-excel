@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=National+Park:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.national-park {
+    font-family: "National Park", sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+[bold="yes"] {
+    font-weight: bold;
+}
+
+[italic="yes"] {
+    font-style: italic;
+}
+
+[underline="yes"] {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline:not(.tool.underline) {
+    text-decoration: underline;
+}
+
+* {
+    font-family: "National Park", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+}
+
+.toolbar {
+    margin-bottom: 16px;
+}
+
+.tool {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition-duration: 300ms;
+}
+
+.tool:hover, .tool.active:hover {
+    background-color: #8080804b;
+}
+
+.tool.active {
+    background-color: #80808035;
+}
+
+.font-chooser, .font-sizer {
+    border: 0;
+    background-color: transparent;
+    height: 40px;
+    border-radius: 99px;
+    padding: 0 16px;
+}
+
+.font-chooser:hover, .font-sizer:hover {
+    background-color: #8080804b;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.zone {
+    width: 100vw;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 48px auto;
+    grid-template-rows: 30px auto;
+    position: relative;
+}
+
+.lignes {
+    grid-row: 2;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+}
+
+.ligne {
+    width: 48px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.colonnes {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+}
+
+.colonne {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: solid 1px black;
+}
+
+.cellules {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.cellule {
+    overflow: auto;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    outline: none;
+}
+
+
+.info {
+    grid-row: 1;
+    grid-column: 1;
+    background-color: #fff;
+    width: 48px;
+    height: 30px;
+    line-height: 30px;
+    position: sticky;
+    left: 0;
+    border: 1px solid black;
+    text-align: center;
+}
+
+[font="roboto"] {
+    font-family: Roboto, sans-serif;
+}
+
+[font="inter"] {
+    font-family: Inter, sans-serif;
+}
+
+[font="nationalpark"] {
+    font-family: 'National Park', sans-serif;
+}
+
+[size="8"] {
+    font-size: 8px;
+}
+
+[size="9"] {
+    font-size: 9px;
+}
+
+[size="10"] {
+    font-size: 10px;
+}
+
+[size="11"] {
+    font-size: 11px;
+}
+
+[size="12"] {
+    font-size: 12px;
+}
+
+[size="13"] {
+    font-size: 13px;
+}
+
+[size="14"] {
+    font-size: 14px;
+}
+
+[size="15"] {
+    font-size: 15px;
+}
+
+[size="16"] {
+    font-size: 16px;
+}
+
+[size="17"] {
+    font-size: 17px;
+}

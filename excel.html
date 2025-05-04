@@ -1,73 +1,81 @@
 <!doctype html>
 <html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Mini Excel</title>
+        <link rel="stylesheet" href="excel.css" />
+        <link rel="shortcut icon" href="excel-logo.png" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        />
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="excel.css">
-    <link rel="shortcut icon" href="excel-logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-</head>
-
-<body>
-    <header class="logo-title">
-        <div class="logo">
-            <img src="excel-logo.png" alt="Logo de excel">
+    <body>
+        <header class="logo-title">
+            <div class="logo">
+                <img src="excel-logo.png" alt="Logo de excel" />
+            </div>
+            <div class="input-group">
+                <input
+                    id="title"
+                    type="text"
+                    class="form-control"
+                    placeholder="Document sans titre"
+                    aria-label="Document sans titre"
+                    aria-describedby="extension"
+                />
+                <span class="input-group-text" id="extension">.xlsx</span>
+            </div>
+        </header>
+        <nav class="toolbar">
+            <button type="button" class="tool bold">
+                <span class="material-symbols-outlined"> format_bold </span>
+            </button>
+            <button type="button" class="tool italic">
+                <span class="material-symbols-outlined"> format_italic </span>
+            </button>
+            <button type="button" class="tool underline">
+                <span class="material-symbols-outlined">
+                    format_underlined
+                </span>
+            </button>
+            <select name="font" id="font-chooser" class="font-chooser">
+                <option value="roboto">Roboto</option>
+                <option value="inter">Inter</option>
+                <option value="nationalpark">National Park</option>
+            </select>
+            <select name="size" id="font-sizer" class="font-sizer">
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+            </select>
+        </nav>
+        <div class="zone">
+            <div class="info"></div>
+            <div class="lignes"></div>
+            <div class="colonnes"></div>
+            <div class="cellules"></div>
         </div>
-        <div class="input-group">
-            <input id="title" type="text" class="form-control" placeholder="Document sans titre"
-                aria-label="Document sans titre" aria-describedby="extension">
-            <span class="input-group-text" id="extension">.xlsx</span>
-        </div>
-    </header>
-    <nav class="toolbar">
-        <button type="button" class="tool bold">
-            <span class="material-symbols-outlined">
-            format_bold
-            </span>
-        </button>
-        <button type="button" class="tool italic">
-            <span class="material-symbols-outlined">
-            format_italic
-            </span>
-        </button>
-        <button type="button" class="tool underline">
-            <span class="material-symbols-outlined">
-            format_underlined
-            </span>
-        </button>
-        <select name="font" id="font-chooser" class="font-chooser">
-            <option value="roboto">Roboto</option>
-            <option value="inter">Inter</option>
-            <option value="nationalpark">National Park</option>
-        </select>
-        <select name="size" id="font-sizer" class="font-sizer">
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-        </select>
-    </nav>
-    <div class="zone">
-        <div class="info"></div>
-        <div class="lignes"></div>
-        <div class="colonnes"></div>
-        <div class="cellules"></div>
-    </div>
-    <script src="excel.js"></script>
-</body>
-
+        <script src="excel.js"></script>
+    </body>
 </html>

@@ -133,6 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
           if (cellule.getAttribute("italic") == "yes") {
             toolItalic.classList.add("active");
           }
+          if (cellule.getAttribute("underline") == "yes") {
+            toolUnderline.classList.add("active");
+          }
           let _fontName = cellule.getAttribute("font");
           switch (_fontName) {
             case "roboto":
